@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+  <style>
+   
+
+    input[type="radio"] {
+      width: 15px;
+      height: 15px;
+    }
+  </style>
+
+   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google Font: Source Sans Pro -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700"
+      rel="stylesheet"
+    />
+    <meta charset="utf-8" />
+    <title>FormWizard_v1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="colorlib.com" />
+
+    <link
+      rel="stylesheet"
+      href="fonts/material-design-iconic-font/css/material-design-iconic-font.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="robots" content="noindex, follow" />
+    <script nonce="e8e8a3ad-9dc4-4c95-9899-373df87e9372">
+      (function (w, d) {
+        !(function (dk, dl, dm, dn) {
+          dk[dm] = dk[dm] || {};
+          dk[dm].executed = [];
+          dk.zaraz = { deferred: [], listeners: [] };
+          dk.zaraz.q = [];
+          dk.zaraz._f = function (dp) {
+            return function () {
+              var dq = Array.prototype.slice.call(arguments);
+              dk.zaraz.q.push({ m: dp, a: dq });
+            };
+          };
+          for (const dr of ["track", "set", "debug"])
+            dk.zaraz[dr] = dk.zaraz._f(dr);
+          dk.zaraz.init = () => {
+            var ds = dl.getElementsByTagName(dn)[0],
+              dt = dl.createElement(dn),
+              du = dl.getElementsByTagName("title")[0];
+            du && (dk[dm].t = dl.getElementsByTagName("title")[0].text);
+            dk[dm].x = Math.random();
+            dk[dm].w = dk.screen.width;
+            dk[dm].h = dk.screen.height;
+            dk[dm].j = dk.innerHeight;
+            dk[dm].e = dk.innerWidth;
+            dk[dm].l = dk.location.href;
+            dk[dm].r = dl.referrer;
+            dk[dm].k = dk.screen.colorDepth;
+            dk[dm].n = dl.characterSet;
+            dk[dm].o = new Date().getTimezoneOffset();
+            if (dk.dataLayer)
+              for (const dy of Object.entries(
+                Object.entries(dataLayer).reduce((dz, dA) => ({
+                  ...dz[1],
+                  ...dA[1],
+                }))
+              ))
+                zaraz.set(dy[0], dy[1], { scope: "page" });
+            dk[dm].q = [];
+            for (; dk.zaraz.q.length; ) {
+              const dB = dk.zaraz.q.shift();
+              dk[dm].q.push(dB);
+            }
+            dt.defer = !0;
+            for (const dC of [localStorage, sessionStorage])
+              Object.keys(dC || {})
+                .filter((dE) => dE.startsWith("_zaraz_"))
+                .forEach((dD) => {
+                  try {
+                    dk[dm]["z_" + dD.slice(7)] = JSON.parse(dC.getItem(dD));
+                  } catch {
+                    dk[dm]["z_" + dD.slice(7)] = dC.getItem(dD);
+                  }
+                });
+            dt.referrerPolicy = "origin";
+            dt.src =
+              "../../../cdn-cgi/zaraz/sd0d9.js?z=" +
+              btoa(encodeURIComponent(JSON.stringify(dk[dm])));
+            ds.parentNode.insertBefore(dt, ds);
+          };
+          ["complete", "interactive"].includes(dl.readyState)
+            ? zaraz.init()
+            : dk.addEventListener("DOMContentLoaded", zaraz.init);
+        })(w, d, "zarazData", "script");
+      })(window, document);
+    </script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <form id="uploadForm" enctype="multipart/form-data" >
+        <h2></h2>
+
+
+        <section>
+          <div class="inner" style="border-radius: 25px;">
+            <div class="image-holder">
+              <img src="images/nbkgimg.png" alt="" />
+            </div>
+
+           <div style="background-color: black; width: 5px;">
+                   <h1></h1>
+                  </div>
+
+
+            <div class="form-content">
+              <div class="form-header">
+                <h3>Registration</h3>
+              </div>
+              <p>Please fill with your details</p>
+              <div class="form-row">
+                <div class="form-holder">
+                  <input
+                    type="text"
+                    id="fname"
+                    name="fname"
+                    placeholder="First Name"
+                    class="form-control"
+                  />
+                </div>
+                <div class="form-holder">
+                  <input
+                    type="text"
+                    id="lname"
+                    name="lname"
+                    placeholder="Last Name"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-holder">
+                  <input
+                    type="text"
+                    id="email"
+                    name="email"
+                    placeholder="Your Email"
+                    class="form-control"
+                  />
+                </div>
+                <div class="form-holder">
+                  <input
+                    type="text"
+                    id="phone"
+                    name="phone"
+                    placeholder="Phone Number"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-holder">
+                  <input
+                    type="text"
+                    id="age"
+                    name="age"
+                    placeholder="Age"
+                    class="form-control"
+                  />
+                </div>
+                <div
+                  class="form-holder"
+                  style="align-self: flex-end; transform: translateY(4px)"
+                >
+                  <div class="checkbox-tick">
+                    <label class="male">
+                      <input
+                        type="radio"
+                        id="gender"
+                        name="gender"
+                        value="male"
+                        checked
+                      />
+                      Male<br />
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="female">
+                      <input
+                        type="radio"
+                        name="gender"
+                        id="gender"
+                        value="female"
+                      />
+                      Female<br />
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="checkbox-circle">
+                <label>
+                  <input type="checkbox" checked /> Nor again is there anyone
+                  who loves or pursues or desires to obtaini.
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <h2></h2>
+        <section>
+          <div class="inner" style="border-radius: 25px;">
+            <div class="image-holder">
+              <img src="images/nbkgimg.png" alt="" />
+            </div>
+            <div style="background-color: black; width: 5px;">
+              <h1></h1>
+             </div>
+
+            <div class="form-content">
+              <div class="form-header">
+                <h3>Registration</h3>
+              </div>
+              <p>Please fill with additional info</p>
+              <div class="form-row">
+                <div class="form-holder w-100">
+                  <input
+                    type="text"
+                    id="address"
+                    name="address"
+                    placeholder="Address"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-holder">
+                  <select class="form-control" name="city" id="city">
+                    <option class="hidden" selected disabled>
+                      Select your City
+                    </option>
+                    <option>Karachi</option>
+                    <option>Lahore</option>
+                    <option>Islamabad</option>
+                    <option>Faisalabad</option>
+                    <option>Rawalpindi</option>
+                    <option>Gujranwala</option>
+                    <option>Peshawar</option>
+                    <option>Multan</option>
+                    <option>Hyderabad</option>
+                    <option>Quetta</option>
+                    <option>Sargodha</option>
+                    <option>Sialkot</option>
+                    <option>Bahawalpur</option>
+                    <option>Sukkur</option>
+                    <option>Jhang</option>
+                    <option>Sheikhupura</option>
+                    <option>Larkana</option>
+                    <option>Gujrat</option>
+                    <option>Mardan</option>
+                    <option>Kasur</option>
+                    <option>Rahim Yar Khan</option>
+                    <option>Sahiwal</option>
+                    <option>Okara</option>
+                    <option>Wah Cantonment</option>
+                    <option>Dera Ghazi Khan</option>
+                    <option>Mirpur Khas</option>
+                    <option>Nawabshah</option>
+                    <option>Burewala</option>
+                    <option>Jhelum</option>
+                    <option>Sadiqabad</option>
+                    <option>Khanewal</option>
+                    <option>Hafizabad</option>
+                    <option>Kohat</option>
+                    <option>Jacobabad</option>
+                    <option>Shikarpur</option>
+                    <option>Muzaffargarh</option>
+                    <option>Khanpur</option>
+                    <option>Gojra</option>
+                    <option>Bahawalnagar</option>
+                    <option>Abbottabad</option>
+                    <option>Mandi Bahauddin</option>
+                    <option>Tando Allahyar</option>
+                    <option>Dera Ismail Khan</option>
+                    <option>Chiniot</option>
+                    <option>Shahdadkot</option>
+                    <option>Kamalia</option>
+                    <option>Toba Tek Singh</option>
+                    <option>Jaranwala</option>
+                    <option>Haveli Lakha</option>
+                    <option>Mianwali</option>
+                    <option>Chishtian</option>
+                    <option>Attock</option>
+                    <option>Vihari</option>
+                    <option>Kot Addu</option>
+                    <option>Nowshera</option>
+                    <option>Swabi</option>
+                    <option>Chakwal</option>
+                    <option>Khushab</option>
+                    <option>Charsadda</option>
+                    <option>Jalalpur Jattan</option>
+                    <option>Bhakkar</option>
+                    <option>Mian Channu</option>
+                    <option>Dadu</option>
+                    <option>Khairpur</option>
+                    <option>Tando Muhammad Khan</option>
+                    <option>Haripur</option>
+                    <option>Lala Musa</option>
+                  </select>
+                </div>
+
+                <div class="form-holder">
+                  <input
+                    type="text"
+                    id="zip"
+                    name="zip"
+                    placeholder="Zip Code"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-holder">
+                  <input
+                    type="text"
+                    id="password"
+                    name="password"
+                    placeholder="Password"
+                    class="form-control"
+                  />
+                </div>
+
+                <div class="form-holder">
+                  <input
+                    type="text"
+                    id="conpassword"
+                    name="conpassword"
+                    placeholder="Confirm Password"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <h2></h2>
+        <section>
+          <div class="inner" style="border-radius: 25px;">
+            <div class="image-holder">
+              <img src="images/nbkgimg.png" alt="" />
+            </div>
+            <div style="background-color: black; width: 5px;">
+                   <h1></h1>
+                  </div>
+
+            <div class="form-content">
+              <div class="form-header">
+                <h3>Registration</h3>
+              </div>
+              <p>Select your Image</p>
+
+              <div class="form-row">
+                
+              </div>
+
+              <div class="form-row">
+                <div class="form-holder w-100">
+                  <label for="exampleInputEmail1">Upload Image</label>
+
+                  <input
+                    style="margin-top: 5px"
+                    type="file"
+                    name="image3"
+                    id="uploadFile"
+                  />
+                </div>
+              </div>
+
+              <div class="checkbox-circle mt-24">
+                <label>
+                  <input type="checkbox" checked /> Please accept
+                  <a href="#">terms and conditions ?</a>
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </section>
+      </form>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <script src="js/jquery.steps.js"></script>
+    <script src="js/main.js"></script>
+
+    
+
+   
+          
+
+
+   
+  </body>
+
+  
+
+  </html>
