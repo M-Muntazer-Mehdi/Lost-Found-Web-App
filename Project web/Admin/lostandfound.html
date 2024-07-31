@@ -1,0 +1,698 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<style>
+  .table-wrapper {
+    position: relative;
+  }
+
+  .table-controls {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 1;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  .table-search label,
+  .table-page-entry label {
+    margin-right: 5px;
+  }
+
+  .table-search input,
+  .table-page-entry select {
+    padding: 5px;
+  }
+
+  .table-search input {
+    width: 200px;
+  }
+
+  .table-search,
+  .table-page-entry {
+    display: flex;
+    align-items: center;
+  }
+
+  .table-page-entry select {
+    width: 60px;
+  }
+
+  .table-wrapper table {
+    margin-top: 40px;
+  }
+
+  .table-wrapper table thead th {
+    background-color: #f9f9f9;
+  }
+  .table-wrapper table thead th:nth-child(10) {
+  width: 5%;
+}
+  .main-sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  .wrapper {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-y: auto;
+    
+  }
+</style>
+
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lost and Found System </title>
+
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Include DataTables library -->
+  <script src="https://cdn.datatables.net/1.11.0/js/jquery.dataTables.min.js"></script>
+  <!-- Include DataTables CSS -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.0/css/jquery.dataTables.min.css">
+
+
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+  <!-- Navbar -->
+ <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+    
+    </ul>
+
+
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Messages Dropdown Menu -->
+      
+      <!-- Notifications Dropdown Menu -->
+
+      <li class="nav-item">
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <i class="fas fa-expand-arrows-alt"></i>
+        </a>
+      </li>
+     
+    </ul>
+  </nav>
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="" class="brand-link">
+      <img src="dist/img/logo.jpeg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">Lost and Found</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+   <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+    <img src="dist/img/avatar.png" class="img-square elevation-3" style="width:30px;  border-radius:10%;" alt="User Image">        </div>
+        <div class="info">
+          <a href="#" class="d-block" style="margin-top: -12px">Junio K. Krem</a>
+         <a href="#" style="color: #239db1; font-size: 15px"><i class="fa fa-circle text-primary" style="font-size: 13px;"></i> Admin</a>
+        </div>
+
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item">
+            <a href="AdminDashboard.html" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Dashboard
+              </p>
+            </a>
+          </li>
+          <li class="nav-item menu-open">
+            <a href="lostandfound.html" class="nav-link active">
+              <i class="nav-icon fas fa-list-alt"></i>
+              <p>
+               Lost and Found Item
+              </p>
+            </a>
+          </li>
+        
+          <li class="nav-item">
+            <a href="usermanagement.html" class="nav-link">
+              <i class="nav-icon fas fa-users-cog"></i>
+              <p>
+                User Management
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="notification.html" class="nav-link">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Notifications
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="../Log in/Admin.html" class="nav-link">
+              <i class="nav-icon fas fa-power-off"></i>
+              <p>
+                Logout
+              </p>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<div class="content-wrapper" style="overflow-x: auto;">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>Lost and Found Item</h1>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">Lost and Found Item</li>
+          </ol>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid" style="overflow-x: auto;">
+      <div class="row">
+        <div class="col-12">
+     
+
+          <div class="card" style="overflow-x: auto;">
+            <div class="card-header" style="overflow-x: auto;">
+              <h3 class="card-title">Lost and Found Item Data table</h3> 
+             
+
+            </div>
+           
+            <!-- /.card-header -->
+            
+            <div class="card-body" style="overflow-x: auto;overflow-y: auto;">
+              <div class="table-wrapper">
+                <div class="table-controls" style="position: sticky; top: 0; z-index: 1; background-color: white;">
+                  <!-- Search box -->
+                  <div class="table-search">
+                    <label for="example1_search">Search:</label>
+                    <input id="example1_search" type="text" placeholder="Search...">
+                  </div>
+                  <!-- Page entry box -->
+                  <div class="table-page-entry">
+                    <label for="example1_length">Show:</label>
+                    <select id="example1_length">
+                      <option value="10">10</option>
+                      <option value="25">25</option>
+                      <option value="50">50</option>
+                      <option value="100">100</option>
+                    </select>
+                    <span>entries</span>
+                  </div>
+                </div>
+                <!-- Table -->
+                <table id="example1" class="table table-bordered table-striped table-hover">
+                  <thead>
+                    <tr>
+                      <th style="width: 5%; background-color: lightgreen; border-color: yellow;">Count</th>
+                      <th style="width: 10%; background-color: lightgreen; border-color: yellow;">Found/Lost</th>
+                      <th style="width: 15%; background-color: lightgreen; border-color: yellow;">Item</th>
+                      <th style="width: 10%; background-color: lightgreen; border-color: yellow;">Location</th>
+                      <th style="width: 8%; background-color: lightgreen; border-color: yellow;">Date</th>
+                      <th style="width: 8%; background-color: lightgreen; border-color: yellow;">Time</th>
+                      <th style="width: 15%; background-color: lightgreen; border-color: yellow;">Further Details</th>
+                      <th style="width: 8%; background-color: lightgreen; border-color: yellow;">Image</th>
+                      <th style="width: 10%; background-color: lightgreen; border-color: yellow;">Name</th>
+                      <th style="width: 5%; background-color: lightgreen; border-color: yellow;">Email</th>
+                      <th style="width: 8%; background-color: lightgreen; border-color: yellow;">Phone</th>
+                      <th style="width: 10%; background-color: lightgreen; border-color: yellow;">Remarks</th>
+                      <th style="width: 5%; background-color: lightgreen; border-color: yellow;">Actions</th>
+                      <th style="width: 5%; background-color: lightgreen; border-color: yellow;"></th>
+                    </tr>
+                  </thead>
+                  <tbody id="tableBody">
+                    <!-- Table rows will be dynamically generated -->
+                  </tbody>
+                </table>
+                
+                  
+                      <!-- Table rows go here -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            
+            
+            
+
+
+
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </div>
+    
+    <!-- /.container-fluid -->
+  </section>
+  <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+
+
+
+
+
+
+
+
+
+
+  <!-- /.content-wrapper -->
+  
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- DataTables  & Plugins -->
+<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="plugins/jszip/jszip.min.js"></script>
+<script src="plugins/pdfmake/pdfmake.min.js"></script>
+<script src="plugins/pdfmake/vfs_fonts.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+
+
+
+<!-- DataTables  & Plugins -->
+
+<script src="plugins/jszip/jszip.min.js"></script>
+<script src="plugins/pdfmake/pdfmake.min.js"></script>
+<script src="plugins/pdfmake/vfs_fonts.js"></script>
+<script src="dist/js/adminlte.min.js"></script>
+<!-- AdminLTE App -->
+
+<script src="dist/js/demo.js"></script>
+<!-- AdminLTE App -->
+
+<!-- AdminLTE for demo purposes -->
+
+<!-- Page specific script -->
+<script>
+ 
+
+
+
+
+
+    // Initialize the DataTable after adding the rows
+
+
+// Show the table
+
+</script>
+
+
+<script>
+  
+  
+  
+
+    // Get the value from session storage
+    const myText = sessionStorage.getItem("name");
+    
+    var myParagraph = document.getElementById("name");
+    myParagraph.innerHTML = myText;
+    sessionStorage.setItem("name", username);
+    // Set the value to the label
+  
+  
+  
+  
+  
+  
+    function printTableRow(button) {
+    // Get the table row that contains the button
+    const row = button.closest('tr');
+  
+    // Create a new window for printing
+    const printWindow = window.open('', 'Print', 'height=600,width=800');
+  
+    // Create the HTML string for the printed content
+    const html = `
+      <html>
+        <head>
+          <title>Print</title>
+          <style>
+            table, th, td {
+              border: 1px solid black;
+              border-collapse: collapse;
+              padding: 5px;
+            }
+          </style>
+        </head>
+        <body>
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Lost/Found</th>
+                <th>Location</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Details</th>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Remarks</th>
+                <th>Item</th>
+                <th>Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${row.outerHTML}
+            </tbody>
+          </table>
+        </body>
+      </html>
+    `;
+  
+    // Write the HTML to the new window
+    printWindow.document.write(html);
+  
+    // Print the contents of the new window
+    printWindow.print();
+  
+    // Close the new window
+    printWindow.close();
+  }
+  
+  
+    
+    </script>
+    <script>
+      function printTable(button) {
+    // Get the table element
+    const table = button.closest('table');
+  
+    // Create a new window for printing
+    const printWindow = window.open('', 'Print', 'height=600,width=800');
+  
+    // Create the HTML string for the printed content
+    const html = `
+      <html>
+        <head>
+          <title>Lost and Found Data</title>
+          <style>
+            table, th, td {
+              border: 1px solid black;
+              border-collapse: collapse;
+              padding: 5px;
+            }
+          </style>
+        </head>
+        <body>
+          ${table.outerHTML}
+        </body>
+      </html>
+    `;
+  
+    // Write the HTML to the new window
+    printWindow.document.write(html);
+  
+    // Print the contents of the new window
+    printWindow.print();
+  
+    // Close the new window
+    printWindow.close();
+  }
+  var count=1;
+  window.onload = function() {
+          // Call your function here
+          getblog();
+  count=1;
+        };
+  
+
+
+        var dataTable;
+
+        function getblog() {
+    var id = $("#id5").val();
+    $.ajax({
+      url: 'http://localhost:4000/GetReport',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      type: 'GET',
+      success: function(results) {
+        // Clear any existing table rows
+        $("#tableBody").empty();
+        // Iterate over the results array and add a row for each object
+        results.forEach(function(result) {
+          
+          // Create a new table row
+          var row = $("<tr></tr>");
+          $("<td></td>").text(count).css({
+  "background-color": "lightblue",
+  "border-color": "yellow"
+}).appendTo(row);
+
+$("<td></td>").text(result.Type).css({
+  "border-color": "green"
+}).appendTo(row);
+
+$("<td></td>").text(result.ItemName).css({
+  "border-color": "green"
+}).appendTo(row);
+
+$("<td></td>").text(result.Location_Name).css({
+  "border-color": "green"
+}).appendTo(row);
+
+$("<td></td>").text(result.Date_).css({
+  "border-color": "green"
+}).appendTo(row);
+
+$("<td></td>").text(result.Time_).css({
+  "border-color": "green"
+}).appendTo(row);
+
+$("<td></td>").text(result.Description).css({
+  "border-color": "green"
+}).appendTo(row);
+
+const imageCell = $("<td></td>");
+const image = $("<img>").attr("src", "../User DashBoard/upload/" + result.Image);
+image.attr("width", "100").attr("border-radius", "5px");
+image.appendTo(imageCell);
+imageCell.css({
+  "border-color": "green"
+}).appendTo(row);
+
+$("<td></td>").text(result.Name).css({
+  "border-color": "green"
+}).appendTo(row);
+
+$("<td></td>").text(result.Email).css({
+  "border-color": "green"
+}).appendTo(row);
+
+$("<td></td>").text(result.Phone).css({
+  "border-color": "green"
+}).appendTo(row);
+
+$("<td></td>").text(result.IsApplied).css({
+  "border-color": "green"
+}).appendTo(row);
+
+count++;
+
+var buttonCell = $("<td></td>");
+var button = $("<button></button>").addClass("btn btn-primary btn-sm").click(function() {
+  printTableRow(this);
+});
+var icon = $("<i></i>").addClass("fa fa-list-alt");
+button.append(icon);
+buttonCell.append(button);
+buttonCell.css({
+  "border-color": "green"
+  
+}).appendTo(row);
+
+
+  // Create the button cell and append the button to it
+  var buttonCell = $("<td></td>");
+
+
+var deleteButton = $("<button></button>").addClass("btn btn-danger btn-xs");
+var deleteIcon = $("<i></i>").addClass("fa fa-trash");
+deleteButton.append(deleteIcon);
+
+
+deleteButton.on("click", function() {
+  var email = result.Email;
+  var id = result.ID;
+  deleteuser(email,id);
+
+});
+
+
+
+
+buttonCell.append(deleteButton);
+buttonCell.appendTo(row);
+
+  
+          // Add the row to the table body
+          $("#tableBody").append(row);
+        });
+
+
+       // Initialize DataTable
+dataTable = $("#example1").DataTable({
+  "language": {
+    "lengthMenu": "Show _MENU_ entries",
+    "search": "",
+    "info": "Showing _START_ to _END_ of _TOTAL_ entries",
+    "infoEmpty": "Showing 0 to 0 of 0 entries",
+    "paginate": {
+      "first": "First",
+      "last": "Last",
+      "next": "Next",
+      "previous": "Previous"
+    }
+  },
+  "dom": "<'row'<'col-sm-12'tr>>" +
+    "<'row'<'col-sm-5'l><'col-sm-7'p>>", // Modified dom structure to include search box and page entry box
+});
+
+// Example event handler for searching
+$("#example1_search").on("keyup", function () {
+  var searchText = $(this).val();
+  dataTable.search(searchText).draw();
+});
+
+// Example event handler for changing page entry
+$("#example1_length").on("change", function () {
+  var pageLength = $(this).val();
+  dataTable.page.len(pageLength).draw();
+});
+
+// Show the table
+$("#example1").show();
+
+
+
+
+
+
+      },
+      error: function() {
+        alert('error occurred');
+      }
+    });
+  }
+  
+  
+  
+  function deleteuser(email, id) {
+
+    
+var data = { email: email, id: id };
+
+$.ajax({
+  url: "http://localhost:4000/deletepost",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  type: "DELETE",
+  data: JSON.stringify(data),
+  success: function () {
+    //alert("User deleted successfully");
+    location.reload(true);
+  },
+  error: function () {
+    alert("Connection error");
+  },
+});
+}
+    </script>
+
+    
+</body>
+</html>
