@@ -29,10 +29,10 @@ Students can search for lost items using keywords, dates, and locations. Advance
 <table align="center">
   <tr>
     <td align="center">
-     <img src="https://i.postimg.cc/wM2RnSKF/Screenshot-2024-08-07-042750.png" border="0" width="500" height="300">
+     <img src="https://i.postimg.cc/wM2RnSKF/Screenshot-2024-08-07-042750.png" border="0" width="400" height="250">
     </td>
      <td align="center">
-     <img src="https://i.postimg.cc/bJNh3MTq/Screenshot-2024-08-07-042840.png" border="0" width="500" height="300">
+     <img src="https://i.postimg.cc/bJNh3MTq/Screenshot-2024-08-07-042840.png" border="0" width="400" height="250">
     </td>
   </tr>
 </table>
@@ -49,10 +49,10 @@ Includes functionalities such as student feedback and reviews, integration with 
 <table align="center">
   <tr>
     <td align="center">
-     <img src="https://i.postimg.cc/cCDDckJt/Screenshot-2024-08-07-043257.png" border="0" width="500" height="300">
+     <img src="https://i.postimg.cc/cCDDckJt/Screenshot-2024-08-07-043257.png" border="0" width="400" height="250">
     </td>
      <td align="center">
-     <img src="https://i.postimg.cc/zfmxpgq7/Screenshot-2024-08-07-043611.png" border="0" width="500" height="300">
+     <img src="https://i.postimg.cc/zfmxpgq7/Screenshot-2024-08-07-043611.png" border="0" width="400" height="250">
     </td>
   </tr>
 </table>
