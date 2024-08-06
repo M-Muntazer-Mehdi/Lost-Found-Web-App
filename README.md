@@ -70,11 +70,11 @@ Includes functionalities such as student feedback and reviews, integration with 
 **3. Project Setup**
 - Clone the repository:
      ```bash
-     git clone https://github.com/your-username/lost-and-found-management-system.git
+     git clone https://github.com/M-Muntazer-Mehdi/Lost-Found-Web-App.git
      ```
 - Navigate to the project directory:
      ```bash
-     cd lost-and-found-management-system
+     cd Project web
      ```
 - Install the required dependencies:
      ```bash
